@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "844a3745-bf63-4a85-bb83-ae05b391f66e",
+		"name": "Test wordl office",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get inventario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/shop/getinventario?nombre=hua&precioInicial=1&precioFinal=700000&marca=huaw&size=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shop",
+						"getinventario"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "hua"
+						},
+						{
+							"key": "precioInicial",
+							"value": "1"
+						},
+						{
+							"key": "precioFinal",
+							"value": "700000"
+						},
+						{
+							"key": "marca",
+							"value": "huaw"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar producto al carrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"inventarioId\":1,\n    \"cantidad\":2,\n    \"estado\": \"pedido\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shop/saveproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shop",
+						"saveproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/shop/getpedidos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shop",
+						"getpedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete pedidos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/shop/deletepedidos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shop",
+						"deletepedidos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
